@@ -1,3 +1,3 @@
 ## Softwares
-#Solidwork crack
-#Office Key
+Solidwork crack
+Office Key
