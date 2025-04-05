@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi File Downloader</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider round"></span>
+    </label>
+    <span>Dark Mode</span>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Download My GitHub Files</h1>
+    <p>Select and download any of the files below:</p>
+
+    <div class="file-list">
+      <div class="file-card">
+        <h3>Vigneshwaran CV</h3>
+        <a class="btn" href="https://github.com/vigneshwaraneem/SampleRepo/raw/main/VIGNESHWARAN_CV.pdf" download>Download</a>
+      </div>
+
+      <div class="file-card">
+        <h3>Project Report</h3>
+        <a class="btn" href="https://github.com/vigneshwaraneem/SampleRepo/raw/main/Project_Report.pdf" download>Download</a>
+      </div>
+
+      <div class="file-card">
+        <h3>Source Code (ZIP)</h3>
+        <a class="btn" href="https://github.com/vigneshwaraneem/SampleRepo/raw/main/SourceCode.zip" download>Download</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark');
+      toggle.checked = true;
+    }
+
+    toggle.addEventListener('change', () => {
+      body.classList.toggle('dark');
+      localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+
+</body>
+</html>

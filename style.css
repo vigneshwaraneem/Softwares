@@ -1,0 +1,121 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f2f2;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+.content {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.file-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.file-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 280px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.file-card:hover {
+  transform: translateY(-5px);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 25px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  border-radius: 50%;
+  background-color: white;
+  left: 3px;
+  top: 3px;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+/* Dark Mode */
+body.dark {
+  background: #1e1e1e;
+  color: #f2f2f2;
+}
+
+body.dark .file-card {
+  background: #2c2c2c;
+  box-shadow: 0 5px 15px rgba(255,255,255,0.05);
+}
+
+body.dark .btn {
+  background-color: #00bcd4;
+}
+
+body.dark .btn:hover {
+  background-color: #0097a7;
+}
